@@ -1,13 +1,6 @@
 import pandas as pd 
-import streamlit as st 
-
+import streamlit as st p
 import numpy as np
-from nltk.corpus import stopwords
-from nltk.tokenize import word_tokenize
-import nltk
-from nltk.stem import WordNetLemmatizer
-import plotly.graph_objects as go
-from mlxtend.frequent_patterns import apriori, association_rules, fpgrowth
 #example below is in the docs.
 from collections import defaultdict
 import requests
@@ -52,7 +45,6 @@ def generatewc(df):
    
     return st.pyplot(fig)
 
-df = pd.read_csv('finalwinedatatidied.csv')
 
 st.title("Wine Review Analysis and NLP 🍷x")
 
@@ -111,7 +103,6 @@ wordcloudselect = wordcloudsplit.lower().strip()
 col1, col2 = st.columns(2)
 
 ##group data frame by price
-groupeddfprice = df.groupby('price_bucket')['tidieddesc'].agg(list).to_dict()
 
 url = 'https://raw.githubusercontent.com/DataJackOH/streamlitwine/main/wcdict.json'
 
