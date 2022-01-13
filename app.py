@@ -170,13 +170,10 @@ with col2:
 with col1:
     st.caption('A simple frequency word cloud')
     
-with col2: 
-    st.caption("""
-        \n    \n
-    
-    
-    
-    """)
+
+with col2:
+    st.markdown("***")
+
     
 with col2:
     st.caption('Frequency, relative to all other prices')
