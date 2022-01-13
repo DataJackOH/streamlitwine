@@ -172,7 +172,7 @@ with col1:
     
 with col2: 
     st.caption("""
-    
+        \n    \n
     
     
     
