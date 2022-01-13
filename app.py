@@ -170,8 +170,15 @@ with col2:
 with col1:
     st.caption('A simple frequency word cloud')
     
+with col2: 
+    st.write("""
+    
+    """)
+    
 with col2:
     st.caption('Frequency, relative to all other prices')
+    
+   
 
 st.caption("""Notice how the simpler word cloud contains a lot of similar words between prices - it looks like reviewers like to lean on the same set of words to describe all prices of wine.
 -   Finish, Flavor, and Fruit tend to occur very frequently in most reviews , irrespective off price
