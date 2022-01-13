@@ -173,7 +173,7 @@ with col1:
     """)
 
 with col2:
-     st.caption("""
+     st.write("""
                     """)
 with col2:
     st.caption("""Frequency, relative to all other prices""")
