@@ -8,13 +8,19 @@ import json
 from wordcloud import WordCloud, STOPWORDS, ImageColorGenerator
 import matplotlib.pyplot as plt
 from PIL import Image
+from io import BytesIO
 import plotly.express as px
 
 
 ##function to generate wordcloud from dataframe
 
+url = 'https://raw.githubusercontent.com/DataJackOH/streamlitwine/f5a1045342c4a0305291c3056d39da9ea71b2b8d/red-wine-pouring-from-a-bottle-ralphbaleno-2.jpg'
+
+redwineglass = requests.get(url)
+
+
 def generatewc(df):
-    mask = np.array(Image.open('/Users/jackohagan/Downloads/red-wine-pouring-from-a-bottle-ralphbaleno-2.jpg'))
+    mask = np.array(Image.open(BytesIO(redwineglass.content)))
     wc = WordCloud(mask=mask, background_color="rgba(255, 255, 255, 0)", mode="RGBA",
                 max_words=150, max_font_size=256,
                 random_state=42, width=mask.shape[1],
@@ -46,7 +52,7 @@ def generatewc(df):
     return st.pyplot(fig)
 
 
-st.title("Wine Review Analysis and NLP 🍷x")
+st.title("Wine Review Analysis and NLP 🍷")
 
 
 with st.expander("What is this tool?"):
@@ -110,9 +116,12 @@ resp = requests.get(url)
 groupeddfprice = json.loads(resp.text)
 
 
+url = 'https://raw.githubusercontent.com/DataJackOH/streamlitwine/main/33947791556638.jpg'
+
+glassbottle = requests.get(url)
 
 
-mask = np.array(Image.open('/Users/jackohagan/Downloads/33947791556638.jpg'))
+mask = np.array(Image.open(BytesIO(glassbottle.content)))
 wc = WordCloud(mask=mask, background_color="rgba(255, 255, 255, 0)", mode="RGBA",
                max_words=150, max_font_size=256,
                random_state=42, width=mask.shape[1],
