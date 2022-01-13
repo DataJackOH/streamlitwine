@@ -25,6 +25,8 @@ chardet==4.0.0
 charset-normalizer==2.0.0
 click==8.0.3
 colorama==0.4.4
+conda==4.11.0
+conda-package-handling==1.7.3
 cryptography==3.4.8
 cymem==2.0.6
 dataclasses==0.8
