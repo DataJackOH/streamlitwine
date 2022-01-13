@@ -1,5 +1,5 @@
 import pandas as pd 
-import streamlit as st p
+import streamlit as st 
 import numpy as np
 #example below is in the docs.
 from collections import defaultdict
