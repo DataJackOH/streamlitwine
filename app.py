@@ -171,7 +171,7 @@ with col1:
     st.caption('A simple frequency word cloud')
     
 with col2: 
-    st.write("""
+    st.caption("""
     
     
     
